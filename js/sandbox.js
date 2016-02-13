@@ -1,16 +1,19 @@
-var IMAGE_BASE_URL = 'http://freudenbergs.de/bert/squeakjs/';
-
 window.onload = function() {
     window.fake = { localStorage: {} };
     window.addEventListener('message', function(event) {
-        var files = event.data.split(',');
-        var imageName = files[0];
-        SqueakJS.runSqueak(IMAGE_BASE_URL + imageName, sqCanvas, {
-            appName: imageName && imageName.replace(/\.image$/, ""),
-            files: files,
+        var url = "http://freudenbergs.de/bert/squeakjs/etoys.image";
+        SqueakJS.runSqueak(url, sqCanvas, {
+            appName: "Etoys",
+            fixedWidth: 1200,
+            fixedHeight: 900,
             fullscreen: true,
-            swapButtons: true,
             spinner: sqSpinner,
+            root: "/Etoys",
+            templates: {
+                "ExampleEtoys": "http://freudenbergs.de/bert/squeakjs/Etoys/ExampleEtoys",
+                "fonts":        "http://freudenbergs.de/bert/squeakjs/Etoys/fonts",
+                "locale":       "http://freudenbergs.de/bert/squeakjs/Etoys/locale",
+            },
             onQuit: function(vm, display, options) {
                 display.vm = null;
                 display.showBanner("Exiting...");

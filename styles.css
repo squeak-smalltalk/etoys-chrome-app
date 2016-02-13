@@ -4,39 +4,7 @@ body, html {
     width: 100%;
     height: 100%;
 }
-body {
-    background-color: #eae6d1;
-    font-family: sans-serif;
-}
-h1 {
-    font-size: 36px;
-    color: #F90;
-}
-#logo {
-    width: 64px;
-    vertical-align: middle;
-    margin: 0 18px 10px 0;
-}
-#sqWelcome {
-    text-align: center;
-}
-#sqWelcome ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    font-size: 24px;
-}
-#sqWelcome ul li {
-    padding: 20px;
-    margin: 4px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-#sqWelcome ul li:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-}
 #sqFrame {
-    display: none;
     width: 100%;
     height: 100%;
     border: 0;
