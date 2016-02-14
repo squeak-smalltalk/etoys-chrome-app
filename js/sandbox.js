@@ -1,5 +1,8 @@
+delete window.localStorage;
+window.localStorage = {};
+delete window.indexedDB;
+
 window.onload = function() {
-    window.fake = { localStorage: {} };
     window.addEventListener('message', function(event) {
         var url = "http://freudenbergs.de/bert/squeakjs/etoys.image";
         SqueakJS.runSqueak(url, sqCanvas, {
