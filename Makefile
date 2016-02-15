@@ -1,7 +1,7 @@
 all: clean build
 
 build:
-	zip SqueakJSApp -@ < bundle.txt
+	zip EtoysApp -@ < bundle.txt
 
 clean:
-	rm -f SqueakJSApp.zip
+	rm -f EtoysApp.zip

@@ -1,1 +1,1 @@
-# SqueakJS-Chrome
+# Etoys-Chrome
